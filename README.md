@@ -1,6 +1,6 @@
-# MedDraft - Clinician-Review Discharge Summary Agent
+# MedSummary - Clinician-Review Discharge Summary Agent
 
-MedDraft is an agentic AI system that reads messy scanned patient notes and produces a structured discharge-summary draft for clinician review. It is built for clinical safety first: when a fact cannot be sourced, the system marks it missing, pending, conflicting, or escalated instead of guessing.
+MedSummary is an agentic AI system that reads messy scanned patient notes and produces a structured discharge-summary draft for clinician review. It is built for clinical safety first: when a fact cannot be sourced, the system marks it missing, pending, conflicting, or escalated instead of guessing.
 
 The repository includes both required Part 1 outputs and the Part 2 learning-from-edits extension.
 
