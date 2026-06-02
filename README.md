@@ -187,24 +187,3 @@ iteration 2: avg_edit_distance=0.0319 avg_reward=0.9682
 iteration 3: avg_edit_distance=0.0130 avg_reward=0.9870
 iteration 4: avg_edit_distance=0.0130 avg_reward=0.9870
 ```
-
-## Limitations
-
-OCR on handwriting is imperfect, so some extracted text is noisy. The system handles this by preserving missing/unclear values and escalating them, but a production system would need stronger OCR, layout understanding, and human validation.
-
-The drug-interaction tool is a mock safety lookup, not a complete clinical database. Medication parsing from handwritten scans is also limited.
-
-The Part 2 reviewer is synthetic. It proves that the feedback loop runs and reduces edit burden under a controlled policy, but it does not prove real-world clinical accuracy. Optimizing only for edit distance can be gamed by becoming vague or matching style without improving medicine. To avoid that, the learning memory is restricted to safe text corrections and cannot override the Part 1 source-evidence guardrail.
-
-## With More Time
-
-I would add:
-
-- better OCR preprocessing and handwriting-aware extraction
-- stronger page and note-boundary detection
-- richer source citations in the final Markdown
-- a real medication terminology and interaction API
-- clinician-weighted evaluation metrics, not only edit distance
-- real doctor-edited drafts for a safer correction-memory or preference-learning loop
-- a small UI for reviewers to approve, reject, and export final summaries
-
